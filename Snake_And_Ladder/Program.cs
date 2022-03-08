@@ -14,7 +14,7 @@ namespace Snake_And_Ladder
             Random random = new Random();
             int DiceRoll = random.Next(1, 7);
             Random check = new Random();
-            int NoPlayLadderSnake = random.Next(0, 3);
+            int NoPlayLadderSnake = check.Next(0, 3);
             switch (NoPlayLadderSnake)
             {
                 case No_Play:

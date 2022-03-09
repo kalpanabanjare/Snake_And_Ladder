@@ -9,7 +9,6 @@ namespace Snake_And_Ladder
         public const int No_Play = 0;
         public const int Ladder = 1;
         public const int Snake = 2;
-
         static void Main(String[] args)
         {
             Console.WriteLine("Welcome to Snake and Ladder game");

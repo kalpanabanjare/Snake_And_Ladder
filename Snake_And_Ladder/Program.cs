@@ -40,6 +40,10 @@ namespace Snake_And_Ladder
                 {
                     Position_Mave = Start_Player_Position;
                 }
+                else if (Position_Mave > Winning_Player_Position)
+                {
+                    Position_Mave = Position - DiceRoll;
+                }
                 else
                 {
                     Position_Mave = Position;

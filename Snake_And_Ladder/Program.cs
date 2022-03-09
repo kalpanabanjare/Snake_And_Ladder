@@ -15,7 +15,8 @@ namespace Snake_And_Ladder
             Console.WriteLine("Welcome to Snake and Ladder game");
             Console.WriteLine("Position of Player: " + Start_Player_Position);
             int Position = 0;
-            for(int Position_Mave = Start_Player_Position; Position_Mave  <= Winning_Player_Position; Position_Mave++)
+            int Count_Dice = 0;
+            for (int Position_Mave = Start_Player_Position; Position_Mave  <= Winning_Player_Position; Position_Mave++)
             { 
                 Random random = new Random();
                 int DiceRoll = random.Next(1, 7);
@@ -25,14 +26,17 @@ namespace Snake_And_Ladder
                 {
                     case No_Play:
                         Console.WriteLine("No Play");
+                        Count_Dice++;
                         break;
                     case Ladder:
                         Console.WriteLine("Ladder");
                         Position += DiceRoll;
+                        Count_Dice++;
                         break;
                     case Snake:
                         Position -= DiceRoll;
                         Console.WriteLine("Snake");
+                        Count_Dice++;
                         break;                      
                 }
                 Position_Mave = Position;
@@ -50,6 +54,7 @@ namespace Snake_And_Ladder
                 }
                 Console.WriteLine("Roll the Dice: " + DiceRoll);
                 Console.WriteLine("Position of Player: " + Position_Mave);
+                Console.WriteLine("Total number of dice roll: " + Count_Dice);
             }
         }
     }
